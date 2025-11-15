@@ -14,9 +14,8 @@
     },
     .dependencies = .{
         .brotli = .{
-            .url = "https://pkg.machengine.org/brotli/10961426f03016e273f4f4653eae907e9e2339b6.tar.gz",
-            .hash = "122031789a7c6364c2f99164c1183661bb5fe914ad7336cc224039c7fba649f35c47",
-            .lazy = true,
+            .url = "git+https://github.com/LaBatata101/brotli.git#3afa38295a78b6eea0a2ea95d1887883e92c3a2e",
+            .hash = "brotli-0.0.0-ppTMdkksIgBgKylzSeK5pgnxNX1fW9DAjCud4R1Zb8Oo",
         },
     },
 }
