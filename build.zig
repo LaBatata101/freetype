@@ -6,16 +6,11 @@ pub fn build(b: *std.Build) void {
 
     const use_system_zlib = b.option(bool, "use_system_zlib", "Use system zlib") orelse false;
     const enable_brotli = b.option(bool, "enable_brotli", "Build Brotli") orelse true;
-    const preferred_link_mode = b.option(
-        std.builtin.LinkMode,
-        "preferred_link_mode",
-        "Prefer building SDL as a statically or dynamically linked library (default: static)",
-    ) orelse .static;
 
     const mod = b.createModule(.{ .target = target, .optimize = optimize });
     const lib = b.addLibrary(.{
         .name = "freetype",
-        .linkage = preferred_link_mode,
+        .linkage = .static,
         .root_module = mod,
     });
     lib.linkLibC();
